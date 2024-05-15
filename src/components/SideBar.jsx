@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdSpaceDashboard, MdSettings } from "react-icons/md";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { PiStudentFill, PiExamFill } from "react-icons/pi";
@@ -9,16 +9,36 @@ import { SiGoogledocs } from "react-icons/si";
 import { BsFillCalendarEventFill } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
+import { FIREBASE_AUTH } from "@/app/firebase/config";
+import { signOut } from "firebase/auth";
+import { useRouter } from "next/navigation";
+
 
 const SideBar = () => {
+  const [user, setUser] = useState(null);
   const [activeLink, setActiveLink] = useState(0);
+  const router = useRouter();
+
+  useEffect(() => {
+    const userInfoString = sessionStorage.getItem('userInfo');
+    if (userInfoString) {
+      const user = JSON.parse(userInfoString);
+      setUser(user);
+    }
+  }, []); 
 
   const handleLinkClick = (index) => {
     setActiveLink(index);
   };
 
-  return (
-    <div className="hidden md:flex flex-col md:min-h-screen bg-[#2B3674] md:w-[300px] md:py-5  ">
+
+  if (!user) {
+    return ;
+  }
+
+  return(
+
+    <div className="hidden md:flex flex-col bg-[#2B3674] md:w-[0.70]/4 md:py-5 h-screen overflow-y-auto" >
       <div className="flex items-center justify-center mb-8 px-8">
         <div className="flex flex-col items-center text-white text-center gap-3 ">
           <h1 className="font-medium text-[24px]">Academic Hub</h1>
@@ -56,7 +76,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/teachers"
+          href='/dashboard/teachers'
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(1)}
         >
@@ -222,9 +242,17 @@ const SideBar = () => {
             </>
           )}
         </Link>
+        <button className="text-white" type="button" onClick={() =>{
+           sessionStorage.clear();
+           signOut(FIREBASE_AUTH);
+           router.push('/login')
+           }}>
+            Logout
+          </button>
       </div>
     </div>
-  );
+  )
+
 };
 
 export default SideBar;

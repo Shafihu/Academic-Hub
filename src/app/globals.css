@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 
-body {
-  /* background-color: #fff; */
-  overflow-x: hidden;
-}
 
+body {
+  position: relative;
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+    -ms-overflow-style: none;
+}
