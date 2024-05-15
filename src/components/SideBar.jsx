@@ -97,7 +97,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/students"
+          href="/dashboard/students"
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(2)}
         >
@@ -118,7 +118,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/billings"
+          href="/dashboard/billings"
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(3)}
         >
@@ -139,7 +139,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/exams"
+          href="/dashboard/exams"
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(4)}
         >
@@ -160,7 +160,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/admission-form"
+          href="/dashboard/admission-form"
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(5)}
         >
@@ -181,7 +181,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/admission-form-list"
+          href="/dashboard/admission-form-list"
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(6)}
         >
@@ -202,7 +202,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/events"
+          href="/dashboard/events"
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(7)}
         >
@@ -223,7 +223,7 @@ const SideBar = () => {
         </Link>
 
         <Link
-          href="/settings&profile"
+          href="/dashboard/settings&profile"
           className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
           onClick={() => handleLinkClick(8)}
         >

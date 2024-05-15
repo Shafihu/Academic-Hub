@@ -5,7 +5,7 @@ import SideBar from "@/components/SideBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "School App",
+  title: "Academic Hub",
   description: "Manage school activities easily",
 };
 
