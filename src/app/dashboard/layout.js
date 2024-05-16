@@ -1,7 +1,7 @@
 import SideBar from "@/components/SideBar";
 
 export const metadata = {
-  title: "Dashboard",
+  title: "Academic Hub | Dashboard",
   description: "Manage school activities easily",
 };
 

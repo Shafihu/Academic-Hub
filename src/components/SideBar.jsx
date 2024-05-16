@@ -12,33 +12,38 @@ import Image from "next/image";
 import { FIREBASE_AUTH } from "@/app/firebase/config";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import { onAuthStateChanged } from "firebase/auth";
 
 
 const SideBar = () => {
-  const [user, setUser] = useState(null);
   const [activeLink, setActiveLink] = useState(0);
   const router = useRouter();
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const userInfoString = sessionStorage.getItem('userInfo');
-    if (userInfoString) {
-      const user = JSON.parse(userInfoString);
-      setUser(user);
-    }
-  }, []); 
+    const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (authUser) => {
+      if (authUser) {
+        setUser(authUser);
+      }else {
+        setUser(null)
+      }
+    })
+    return () => unsubscribe();
+}, [])
 
   const handleLinkClick = (index) => {
     setActiveLink(index);
   };
 
-
-  if (!user) {
+  if(!user) {
     return ;
   }
 
+  if (user) {
+
   return(
 
-    <div className="hidden md:flex flex-col bg-[#2B3674] md:w-[0.70]/4 md:py-5 h-screen overflow-y-auto" >
+    <div className="hidden md:flex flex-col bg-[#2B3674] md:w-[0.70]/4 md:py-5 h-screen overflow-y-auto justify-between" >
       <div className="flex items-center justify-center mb-8 px-8">
         <div className="flex flex-col items-center text-white text-center gap-3 ">
           <h1 className="font-medium text-[24px]">Academic Hub</h1>
@@ -242,16 +247,18 @@ const SideBar = () => {
             </>
           )}
         </Link>
-        <button className="text-white" type="button" onClick={() =>{
+      </div>
+      <button className="text-white" type="button" onClick={() =>{
            sessionStorage.clear();
            signOut(FIREBASE_AUTH);
            router.push('/login')
            }}>
             Logout
           </button>
-      </div>
     </div>
   )
+
+}
 
 };
 

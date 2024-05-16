@@ -1,24 +1,27 @@
 'use client'
 
 import {useEffect, useState} from 'react'
-import { onAuthStateChanged} from "firebase/auth";
-import { FIREBASE_AUTH } from './firebase/config';
 import { useRouter } from "next/navigation";
 
 const Root = () => {
   const router = useRouter();
+  const [user, setUser] = useState(null)
   // const userSession = sessionStorage.getItem('user');
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (user) => {
-      if (user) {
-        router.push('/dashboard')
-      }else {
-        router.push('/login'); 
-      }
-    })
-    return () => unsubscribe();
-}, [])
+    const userInfoString = sessionStorage.getItem('userInfo');
+    if (userInfoString) {
+      const userData = JSON.parse(userInfoString);
+      setUser(userData);
+    }
+  }, []); 
+
+  if (user) {
+    router.push('/dashboard');
+  } else {
+    router.push('/login');
+  }
+
 }
 
 export default Root;

@@ -6,7 +6,8 @@ import QuickInfoBoard from "@/components/QuickInfoBoard";
 import BarChart from "@/components/BarChart";
 import { useRouter } from "next/navigation";
 import Loader from "@/components/Loader";
-import Custom404 from "@/components/Custom404";
+import { onAuthStateChanged } from "firebase/auth";
+import { FIREBASE_AUTH } from "../firebase/config";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -14,22 +15,26 @@ const Dashboard = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const userInfoString = sessionStorage.getItem('userInfo');
-    if (userInfoString) {
-      const user = JSON.parse(userInfoString);
-      setUser(user);
-      setLoading(false);
-    }
-  }, []); 
+    const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (authUser) => {
+      if (authUser) {
+        setUser(authUser);
+        // Serialize user object to JSON string before storing
+        const userInfoString = JSON.stringify(authUser);
+        sessionStorage.setItem('userInfo', userInfoString);
+      }else {
+        router.push('/login'); 
+      }
+    })
+    setLoading(false);
+    return () => unsubscribe();
+}, [])
 
-
-  if (!user) {
-    return <Custom404 />;
-  }
 
   if(loading) {
-    return <div className="flex-1 w-3.4/4 h-screen"><Loader /></div>; 
+    return <div className="flex-1 w-full h-screen"><Loader /></div>; 
   } 
+
+  if (user) {
 
   return (
         <>
@@ -37,7 +42,7 @@ const Dashboard = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-[#4D5DBA] text-[14px] font-medium">
-                  Hi {user.email},
+                  Hi {user && user.email},
                 </p>
                 <h1 className="text-[#2B3674] text-[35px] font-bold ">
                   Welcome to Real Amass!
@@ -69,6 +74,8 @@ const Dashboard = () => {
           </div>
         </>
   );
+
+}
 
 };
 export default Dashboard;
