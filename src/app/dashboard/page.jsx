@@ -49,7 +49,7 @@ const Dashboard = () => {
               </div>
 
               <div className="flex items-center justify-between gap-5">
-                <p className="text-[#4D5DBA] text-[14px] font-medium">
+                <p className="text-indigo-600 text-[14px] font-medium">
                   {user && user.email}
                 </p>
                 <div className="bg-pink-300 w-[50px] h-[50px] rounded-full"></div>
