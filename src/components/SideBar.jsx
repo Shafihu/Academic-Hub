@@ -45,7 +45,7 @@ const SideBar = () => {
   return(
 
     <div className="hidden lg:flex flex-col bg-indigo-600 rounded-tr-3xl   md:py-5 h-screen overflow-y-auto justify-between " >
-      <div className="flex items-center justify-center mb-8 px-8">
+      <div className="flex items-center justify-center mb-0 px-8">
         <div className="flex flex-col items-center text-white text-center gap-3 ">
           <h1 className="font-medium text-[24px]">Academic Hub</h1>
     <div className="bg-white rounded-full">
@@ -57,7 +57,7 @@ const SideBar = () => {
             alt="Logo"
           />
     </div>
-          <p className="font-bold text-[17px]">Real Amass Senior High School</p>
+          <p className="font-bold text-[17px]">School Management System</p>
         </div>
       </div>
 
