@@ -64,7 +64,7 @@ const SideBar = () => {
       <div className="pl-8 flex flex-col ">
         <Link
           href="/dashboard"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(0)}
         >
           <MdSpaceDashboard className="text-[18px]" />
@@ -85,7 +85,7 @@ const SideBar = () => {
 
         <Link
           href='/dashboard/teachers'
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(1)}
         >
           <FaChalkboardTeacher className="text-[18px]" />
@@ -106,7 +106,7 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/students"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(2)}
         >
           <PiStudentFill className="text-[18px]" />
@@ -127,7 +127,7 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/billings"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(3)}
         >
           <FaWallet className="text-[18px]" />
@@ -148,7 +148,7 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/exams"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(4)}
         >
           <PiExamFill className="text-[18px]" />
@@ -169,7 +169,7 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/admission-form"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(5)}
         >
           <SiGoogledocs className="text-[18px]" />
@@ -190,7 +190,7 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/admission-form-list"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(6)}
         >
           <SiGoogledocs className="text-[18px]" />
@@ -211,7 +211,7 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/events"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(7)}
         >
           <BsFillCalendarEventFill className="text-[18px]" />
@@ -232,7 +232,7 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/settings&profile"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
           onClick={() => handleLinkClick(8)}
         >
           <MdSettings className="text-[20px]" />
@@ -251,13 +251,15 @@ const SideBar = () => {
           )}
         </Link>
       </div>
-<div className="flex items-center text-white text-[14px] gap-4 w-fit pl-8">
-<RiLogoutBoxFill className="text-[20px]" />
-<button type="button" onClick={() =>{
+<div className=" text-white text-[14px] gap-4 w-fit pl-8 ">
+<button 
+className="flex items-center gap-4"
+type="button" onClick={() =>{
            sessionStorage.clear();
            signOut(FIREBASE_AUTH);
            router.push('/login')
            }}>
+            <RiLogoutBoxFill className="text-[20px]" />
             Logout
           </button>
 </div>
