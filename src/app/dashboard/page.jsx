@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import Loader from "@/components/Loader";
 import { onAuthStateChanged } from "firebase/auth";
 import { FIREBASE_AUTH } from "../firebase/config";
+import Image from "next/image";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -52,7 +53,15 @@ const Dashboard = () => {
                 <p className="text-indigo-600 text-[14px] font-medium">
                   {user && user.email}
                 </p>
-                <div className="bg-pink-300 w-[50px] h-[50px] rounded-full"></div>
+                <div className="bg-white w-[50px] h-[50px] rounded-full overflow-hidden">
+                <Image
+                  className="object-cover object-center  bg-red-400 "
+                  src="/profilePic2.jpg"
+                  width={1000}
+                  height={1000}
+                  alt="Profile Pictuer"
+                />
+                </div>
               </div>
             </div>
             <div className="mt-[30px] mb-[25px] ">
