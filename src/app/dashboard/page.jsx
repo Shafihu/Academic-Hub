@@ -42,10 +42,10 @@ const Dashboard = () => {
             <div className="flex sm:flex-row flex-col items-center justify-between">
             <div className="relative shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg">
                 <input
-                  className="rounded-lg px-4 py-2 pl-10 text-[#2B3674] "
+                  className="rounded-lg px-4 py-2 pl-10 text-indigo-600 "
                   placeholder="Search"
                 />
-                <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-[#2B3674] text-[18px]" />
+                <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-indigo-600 text-[18px]" />
               </div>
 
               <div className="flex items-center justify-between gap-5">
