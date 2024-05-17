@@ -7,6 +7,7 @@ import { PiStudentFill, PiExamFill } from "react-icons/pi";
 import { FaWallet } from "react-icons/fa6";
 import { SiGoogledocs } from "react-icons/si";
 import { BsFillCalendarEventFill } from "react-icons/bs";
+import { RiLogoutBoxFill } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
 import { FIREBASE_AUTH } from "@/app/firebase/config";
@@ -43,17 +44,19 @@ const SideBar = () => {
 
   return(
 
-    <div className="hidden lg:flex flex-col bg-[#2B3674] rounded-tr-3xl   md:py-5 h-screen overflow-y-auto justify-between" >
+    <div className="hidden lg:flex flex-col bg-indigo-600 rounded-tr-3xl   md:py-5 h-screen overflow-y-auto justify-between " >
       <div className="flex items-center justify-center mb-8 px-8">
         <div className="flex flex-col items-center text-white text-center gap-3 ">
           <h1 className="font-medium text-[24px]">Academic Hub</h1>
-          <Image
+    <div className="bg-white rounded-full">
+    <Image
             className="object-cover object-center"
             src="/logo.png"
             width={70}
             height={70}
             alt="Logo"
           />
+    </div>
           <p className="font-bold text-[17px]">Real Amass Senior High School</p>
         </div>
       </div>
@@ -248,13 +251,16 @@ const SideBar = () => {
           )}
         </Link>
       </div>
-      <button className="text-white" type="button" onClick={() =>{
+<div className="flex items-center text-white text-[14px] gap-4 w-fit pl-8">
+<RiLogoutBoxFill className="text-[20px]" />
+<button type="button" onClick={() =>{
            sessionStorage.clear();
            signOut(FIREBASE_AUTH);
            router.push('/login')
            }}>
             Logout
           </button>
+</div>
     </div>
   )
 
