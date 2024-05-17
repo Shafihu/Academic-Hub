@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 import {
   Chart as ChartJS,
@@ -11,6 +11,8 @@ import {
   PointElement,
   Legend,
   Tooltip,
+  BarElement,
+  BarController,
 } from "chart.js";
 
 ChartJS.register(
@@ -19,7 +21,9 @@ ChartJS.register(
   LinearScale,
   PointElement,
   Legend,
-  Tooltip
+  Tooltip,
+  BarElement,
+  BarController,
 );
 
 export default function BasicLineChart() {
@@ -52,14 +56,12 @@ export default function BasicLineChart() {
     scales: {
       y: {
         // min: 3,
-        // max: 6,
+        // max: 10000,
       },
     },
   };
 
   return (
-    <div className="w-[100%] h-[100%]">
-      <Line data={data} options={options}></Line>
-    </div>
+      <Bar data={data} className="max-h-[230px]" options={options}></Bar>
   );
 }

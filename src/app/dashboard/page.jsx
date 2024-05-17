@@ -38,13 +38,13 @@ const Dashboard = () => {
 
   return (
         <>
-          <div className="px-[25px] sm:p-[30px] flex-1 w-3.4/4 h-screen overflow-y-auto ">
-            <div className="flex items-center justify-between">
+          <div className="px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto ">
+            <div className="flex sm:flex-row flex-col items-center justify-between">
               <div>
                 <p className="text-[#4D5DBA] text-[14px] font-medium">
                   Hi {user && user.email},
                 </p>
-                <h1 className="text-[#2B3674] text-[35px] font-bold ">
+                <h1 className="text-[#2B3674] text-[30px] sm:text-[35px] font-bold ">
                   Welcome to Real Amass!
                 </h1>
               </div>
@@ -56,19 +56,19 @@ const Dashboard = () => {
                 <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-[#2B3674] text-[18px]" />
               </div>
             </div>
-            <div className="mt-[30px] mb-[25px]">
+            <div className="mt-[30px] mb-[25px] ">
               <QuickInfoBoard />
             </div>
 
-            <div className="flex justify-between items-center gap-5">
-              <div className="flex-[0.7] h-fit shadow-[rgba(17,_17,_26,_0.2)_0px_0px_16px] rounded-xl p-7">
+            <div className="flex-col h-[330px] flex xl:flex-row justify-between items-center gap-5">
+              <div className="w-full md:flex-[0.7] h-fit shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
                 <div className="mb-6">
                   <p className="text-[#2B3674] font-semibold">Fee Collection</p>
                 </div>
                 <BarChart />
               </div>
-              <div className="flex-[0.3] h-[460px] shadow-[rgba(17,_17,_26,_0.2)_0px_0px_16px] rounded-xl p-7">
-                <p className="text-[#2B3674] font-semibold">Upcoming Exams</p>
+            <div className="w-full md:flex-[0.3] h-full  shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
+                <p className="text-[#2B3674] font-semibold">Upcoming Events</p>
               </div>
             </div>
           </div>

@@ -43,7 +43,7 @@ const SideBar = () => {
 
   return(
 
-    <div className="hidden md:flex flex-col bg-[#2B3674] md:w-[0.70]/4 md:py-5 h-screen overflow-y-auto justify-between" >
+    <div className="hidden lg:flex flex-col bg-[#2B3674] rounded-tr-3xl   md:py-5 h-screen overflow-y-auto justify-between" >
       <div className="flex items-center justify-center mb-8 px-8">
         <div className="flex flex-col items-center text-white text-center gap-3 ">
           <h1 className="font-medium text-[24px]">Academic Hub</h1>
