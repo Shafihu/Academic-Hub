@@ -76,10 +76,12 @@ export default function BarChart() {
   };
 
   return (
+    <div style={{ width: '100%', overflowX: 'auto' }}>
       <Bar 
         data={data} 
         className="max-h-[230px]" 
         options={options}>
       </Bar>
+      </div>
   );
 }
