@@ -37,7 +37,7 @@ export default function Login() {
   };
   
   if (done) {
-    return <div className="flex items-center justify-between w-full h-screen "><p>Checking systems...</p><Loader /></div>; 
+    return <div className="flex flex-row items-center justify-between w-screen h-screen "><p>Checking systems...</p><Loader /></div>; 
   }
 
   return (

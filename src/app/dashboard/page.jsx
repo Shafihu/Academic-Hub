@@ -16,6 +16,7 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+  const [tab, setTab] = useState('Students');
   const router = useRouter();
 
   useEffect(() => {
@@ -89,11 +90,19 @@ const Dashboard = () => {
             </div>
 
             <div className="flex-col h-[330px] flex xl:flex-row justify-between items-center gap-5 xl:my-7 rounded-xl ">
-              <div className="w-full md:flex-[0.7] h-fit shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
+              <div className="w-full md:flex-[0.7] h-full shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
                 <div className="mb-6">
                   <p className="text-indigo-500 font-semibold">Database</p>
                 </div>
-                <BarChart />
+                <div>
+                  <div className="flex
+                  flex-row justify-between items-center">
+                    <input type="text" className="border border-gray-600 py-[1.5px] pl-2 rounded-md text-indigo-500" placeholder="Search" />
+                    <h3 className={tab === 'Students' ? `text-indigo-500 relative font-medium` : `text-gray-600 relative font-medium hover:text-gray-900`}>Students <span className={tab === 'Students' ? `flex bg-indigo-500 w-full h-[0.15em] absolute -bottom-[0.15em] left-0 rounded-lg`:`hidden`}></span></h3>
+                    <h3 className={tab === 'Teachers' ? `text-indigo-500 relative font-medium` : `text-gray-600 relative font-medium hover:text-gray-900`}>Teachers <span className={tab === 'Teachers' ? `flex bg-indigo-500 w-full h-[0.15em] absolute -bottom-[0.15em] left-0 rounded-lg`:`hidden`}></span></h3>
+                    <h3 className={tab === 'Employees' ? `text-indigo-500 relative font-medium` : `text-gray-600 relative font-medium hover:text-gray-900`}>Employees <span className={tab === 'Employees' ? `flex bg-indigo-500 w-full h-[0.15em] absolute -bottom-[0.15em] left-0 rounded-lg`:`hidden`}></span></h3>
+                  </div>
+                </div>
               </div>
             <div className="w-full md:flex-[0.3] h-full  shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
                 <p className="text-indigo-500 font-semibold">Announcements</p>
