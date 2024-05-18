@@ -15,7 +15,7 @@ const Calendar = ({ onYearChange }) => {
 
   const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
     <button
-      className="bg-indigo-500 text-[14px] px-5 text-white py-1 rounded-full inline-block"
+      className="bg-indigo-500 text-[14px] px-5 text-white py-1 rounded-full"
       onClick={onClick}
       ref={ref}
     >
@@ -32,6 +32,7 @@ const Calendar = ({ onYearChange }) => {
       withPortal
       showYearPicker
       dateFormat="yyyy"
+      className="-z-20"
     />
   );
 };

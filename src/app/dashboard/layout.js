@@ -9,7 +9,7 @@ export const metadata = {
 export default function DashboardLayout({ children }) {
   return (
     <div className="flex justify-between">
-      <MobileNav />
+      <MobileNav className="z-50" />
       <SideBar />
       {children}
     </div>

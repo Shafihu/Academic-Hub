@@ -21,7 +21,7 @@ const Revenue = ({ year }) => {
   }, [year]);
 
   return (
-    <div>
+    <div className=''>
       {revenueData ? <BarChart revenueData={revenueData} /> : 'Loading...'}
     </div>
   );

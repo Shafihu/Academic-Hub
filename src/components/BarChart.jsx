@@ -32,16 +32,31 @@ export default function BarChart() {
       {
         label: "Income",
         data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
+        backgroundColor: [
+          'rgb(255, 99, 132, 0.5)',
+        ],
+        borderColor: [
+          'rgb(255, 99, 132)',
+        ],
+        
+        // borderRadius: 50,
+        borderWidth: 1,
         fill: false,
-        borderColor: "#2B3674",
-        tension: 0.4,
         pointBoarderColor: "#2B3674",
       },
+      
       {
         label: "Expenses",
         data: [75, 65, 78, 60, 62, 59, 80, 65, 59, 80, 81, 56],
+        backgroundColor: [
+          'rgb(54, 162, 235, 0.5)',
+        ],
+        borderColor: [
+          'rgb(54, 162, 235)',
+        ],
+        // borderRadius: 50,
+        borderWidth: 1,
         fill: false,
-        borderColor: "#FB7D5B",
         tension: 0.4,
         pointBoarderColor: "#2B3674",
       },
@@ -61,6 +76,10 @@ export default function BarChart() {
   };
 
   return (
-      <Bar data={data} className="max-h-[230px]" options={options}></Bar>
+      <Bar 
+        data={data} 
+        className="max-h-[230px]" 
+        options={options}>
+      </Bar>
   );
 }

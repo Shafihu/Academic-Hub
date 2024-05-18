@@ -15,7 +15,7 @@ const MobileNav = () => {
     }
 
   return (
-    <div className='flex lg:hidden bg-indigo-500 text-white absolute top-0 right-0 w-full h-[70px] items-center justify-between px-5'>
+    <div className='flex lg:hidden bg-indigo-500 text-white absolute top-0 right-0 w-full h-[70px] items-center justify-between px-5 z-[100]'>
     <div className='flex gap-2 items-center'>
         <div className="bg-white rounded-full">
             <Image
@@ -52,7 +52,7 @@ const MobileNav = () => {
                 <Link href="/dashboard/admission-form-list" onClick={toggleNav}>Admission Form List</Link>
                 <Link href="/dashboard/events" onClick={toggleNav}>Events</Link>
                 <Link href="/dashboard/settings&profile" onClick={toggleNav}>Settings & Profile</Link>
-                <Link href="/dashboard/settings&profile" onClick={()=> signOut(FIREBASE_AUTH)}>Logout</Link>
+                <button onClick={()=> signOut(FIREBASE_AUTH)}>Logout</button>
             </div>
             </div>
 )}

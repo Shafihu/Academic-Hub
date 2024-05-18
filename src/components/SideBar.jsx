@@ -257,7 +257,7 @@ className="flex items-center gap-4"
 type="button" onClick={() =>{
            sessionStorage.clear();
            signOut(FIREBASE_AUTH);
-           router.push('/login')
+           router.push('/auth/login')
            }}>
             <RiLogoutBoxFill className="text-[20px]" />
             Logout

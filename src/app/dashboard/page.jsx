@@ -26,7 +26,7 @@ const Dashboard = () => {
         const userInfoString = JSON.stringify(authUser);
         sessionStorage.setItem('userInfo', userInfoString);
       }else {
-        router.push('/login'); 
+        router.push('/auth/login'); 
       }
     })
     setLoading(false);
@@ -43,9 +43,9 @@ const Dashboard = () => {
   return (
         <>
 
-          <div className="px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[70px]  lg:pt-0">
+          <div className="px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[70px]  lg:pt-8">
           <h1 className="lg:hidden inline-block text-[20px] font-bold text-gray-500 py-5 sm:my-10">Dashboard</h1>
-            <div className="hidden lg:flex lg:flex-row flex-col items-center justify-between">
+            <div className="hidden lg:flex lg:flex-row flex-col items-center justify-between lg:mb-10">
             <div className="relative shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg ">
                 <input
                   className="rounded-lg px-4 py-2 pl-10 text-indigo-600 "
@@ -75,7 +75,7 @@ const Dashboard = () => {
 
            
 
-            <div className="flex-col h-[330px] flex xl:flex-row mb-32 xl:my-0 justify-between items-center gap-5">
+            <div className="flex-col  h-[330px] flex xl:flex-row mb-32 xl:my-0 justify-between items-center gap-5 rounded-xl ">
               <div className="w-full md:flex-[0.7] h-fit shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
                 <div className="mb-6 flex items-center justify-between">
                   <p className="text-indigo-500 font-semibold">Revenue</p>
@@ -88,7 +88,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="flex-col h-[330px] flex xl:flex-row justify-between items-center gap-5 xl:my-7">
+            <div className="flex-col h-[330px] flex xl:flex-row justify-between items-center gap-5 xl:my-7 rounded-xl ">
               <div className="w-full md:flex-[0.7] h-fit shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
                 <div className="mb-6">
                   <p className="text-indigo-500 font-semibold">Database</p>

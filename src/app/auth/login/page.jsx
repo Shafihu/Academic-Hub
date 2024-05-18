@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FIREBASE_AUTH } from "../firebase/config";
+import { FIREBASE_AUTH } from "../../firebase/config";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import ButtonLoader from "@/components/ButtonLoader";
@@ -37,7 +37,7 @@ export default function Login() {
   };
   
   if (done) {
-    return <div className="flex-1 w-full h-screen flex-col"><p>Checking systems</p><Loader /></div>; 
+    return <div className="flex items-center justify-between w-full h-screen "><p>Checking systems...</p><Loader /></div>; 
   }
 
   return (
