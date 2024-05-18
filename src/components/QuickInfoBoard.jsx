@@ -6,7 +6,7 @@ import { FaMoneyBill } from "react-icons/fa";
 
 const QuickInfoBoard = () => {
   return (
-    <div className="flex items-center justify-evenly flex-wrap gap-5">
+    <div className="flex items-center justify-evenly flex-wrap gap-5 ">
       <div className="border-2 border-indigo-500 flex flex-col sm:flex sm:flex-row items-center w-[200px] sm:w-[260px] md:w-[260px] py-4 justify-evenly rounded-xl">
         <div className="text-indigo-500 text-[60px]">
           <IoIosPeople />

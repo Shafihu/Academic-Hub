@@ -42,9 +42,11 @@ const Dashboard = () => {
 
   return (
         <>
-          <div className="px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto ">
-            <div className="flex sm:flex-row flex-col items-center justify-between">
-            <div className="relative shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg">
+
+          <div className="px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[70px]  lg:pt-0">
+          <h1 className="lg:hidden inline-block text-[20px] font-bold text-gray-500 py-5 sm:my-10">Dashboard</h1>
+            <div className="hidden lg:flex lg:flex-row flex-col items-center justify-between">
+            <div className="relative shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg ">
                 <input
                   className="rounded-lg px-4 py-2 pl-10 text-indigo-600 "
                   placeholder="Search"
@@ -52,7 +54,7 @@ const Dashboard = () => {
                 <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-indigo-600 text-[18px]" />
               </div>
 
-              <div className="flex items-center justify-between gap-5">
+              <div className="lg:flex items-center justify-between gap-5 hidden ">
                 <p className="text-indigo-600 text-[14px] font-medium">
                   {user && user.email}
                 </p>
@@ -67,7 +69,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-[30px] mb-[25px] ">
+            <div className="m-0 lg:mt-[30px] mb-[25px] ">
               <QuickInfoBoard />
             </div>
 
