@@ -1,6 +1,3 @@
-"use client";
-
-import * as React from "react";
 import { Bar } from "react-chartjs-2";
 
 import {
@@ -26,13 +23,15 @@ ChartJS.register(
   BarController,
 );
 
-export default function BasicLineChart() {
+export default function BarChart() {
+
+
   const data = {
-    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     datasets: [
       {
         label: "Income",
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
         fill: false,
         borderColor: "#2B3674",
         tension: 0.4,
@@ -40,7 +39,7 @@ export default function BasicLineChart() {
       },
       {
         label: "Expenses",
-        data: [75, 65, 78, 60, 62, 59, 80],
+        data: [75, 65, 78, 60, 62, 59, 80, 65, 59, 80, 81, 56],
         fill: false,
         borderColor: "#FB7D5B",
         tension: 0.4,

@@ -9,10 +9,13 @@ import Loader from "@/components/Loader";
 import { onAuthStateChanged } from "firebase/auth";
 import { FIREBASE_AUTH } from "../firebase/config";
 import Image from "next/image";
+import Calendar from "@/components/Calendar";
+import Revenue from "@/components/Revenue";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const router = useRouter();
 
   useEffect(() => {
@@ -68,12 +71,15 @@ const Dashboard = () => {
               <QuickInfoBoard />
             </div>
 
+           
+
             <div className="flex-col h-[330px] flex xl:flex-row mb-32 xl:my-0 justify-between items-center gap-5">
               <div className="w-full md:flex-[0.7] h-fit shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
-                <div className="mb-6">
+                <div className="mb-6 flex items-center justify-between">
                   <p className="text-indigo-500 font-semibold">Revenue</p>
+                  <Calendar onYearChange={setSelectedYear} />
                 </div>
-                <BarChart />
+                <Revenue year={selectedYear}/>
               </div>
             <div className="w-full md:flex-[0.3] h-full  shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-xl p-7">
                 <p className="text-indigo-500 font-semibold">Upcoming Events</p>
