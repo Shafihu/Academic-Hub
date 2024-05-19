@@ -100,7 +100,7 @@ const Dashboard = () => {
                 <DatabaseTabs />
               </div>
             </div>
-            <div className="w-full md:flex-[0.3] h-[330px] shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
+            <div className="w-full md:flex-[0.3] min-h-[330px] shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
               <p className="text-indigo-500 font-semibold">Announcements</p>
             </div>
           </div>
