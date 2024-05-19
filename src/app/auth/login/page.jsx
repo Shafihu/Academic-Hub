@@ -36,9 +36,16 @@ export default function Login() {
       });
   };
   
+
   if (done) {
-    return <div className="flex flex-row items-center justify-between w-screen h-screen "><p>Checking systems...</p><Loader /></div>; 
+    return (
+      <div className="flex flex-col items-center justify-center w-screen h-screen">
+        <p className="mb-4">Checking systems...</p>
+        <Loader />
+      </div>
+    );
   }
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
