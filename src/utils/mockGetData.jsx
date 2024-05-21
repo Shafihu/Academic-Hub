@@ -27,7 +27,7 @@ function mockGetData(tab) {
       else if (tab === "Teachers") resolve(Teachers);
       else if (tab === "Employees") resolve(Employees);
       else resolve([]);
-    }, 500);
+    }, 1000);
   });
 }
 
