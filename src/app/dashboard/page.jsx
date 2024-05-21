@@ -21,7 +21,7 @@ import DatabaseTabs from "@/components/DatabaseTabs";
 const Dashboard = () => {
   // State variables
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const router = useRouter();
 
@@ -41,20 +41,16 @@ const Dashboard = () => {
         router.push('/auth/login');
       }
     });
-    setLoading(false);
+    // setLoading(false);
     return () => unsubscribe();
   }, [router]);
 
-  // Render loading spinner while the authentication state is being determined
-  if (loading) {
-    return <div className="flex-1 w-full h-screen"><Loader /></div>;
-  }
 
   // Render the dashboard for authenticated users
   if (user) {
     return (
       <>
-        <div className="px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[70px] lg:pt-8">
+        <div className="px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[70px] lg:pt-8 relative">
           <h1 className="lg:hidden inline-block text-[20px] font-bold text-gray-500 py-5 sm:my-10">Dashboard</h1>
           
           {/* Search bar and user info */}

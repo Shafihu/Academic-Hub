@@ -24,6 +24,7 @@ export default function Login() {
       .then((userCredential) => {
         const user = userCredential.user;
         router.push("/dashboard");
+        setDone(true)
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -32,7 +33,6 @@ export default function Login() {
       })
       .finally(() => {
         setLoading(false);
-        setDone(true)
       });
   };
   

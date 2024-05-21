@@ -38,7 +38,7 @@ const DatabaseTabs = () => {
       <div className="flex flex-row justify-between items-center mb-4">
         <input
           type="text"
-          className="border border-gray-600 py-1 pl-2 rounded-md text-indigo-500"
+          className="border border-gray-600 py-1 pl-2 rounded-md text-indigo-500 "
           placeholder="Search"
           value={searchQuery}
           onChange={handleSearchChange}
