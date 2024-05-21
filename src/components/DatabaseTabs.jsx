@@ -118,7 +118,7 @@ const DatabaseTabs = () => {
               </table>
             </div>
           ) : (
-            <p>No data available for {tab}</p>
+            <p className='text-sm text-gray-300'>No data found!</p>
           )}
         </div>
       )}
