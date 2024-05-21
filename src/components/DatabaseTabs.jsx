@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import mockGetStudents from '@/utils/mockGetStudents';
+import mockGetData from '@/utils/mockGetData';
 
 const DatabaseTabs = () => {
   const [tab, setTab] = useState('Students');
@@ -9,7 +9,7 @@ const DatabaseTabs = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-        const result = await mockGetStudents(tab);
+        const result = await mockGetData(tab);
         setData(result);
       };
       fetchData();
@@ -74,7 +74,7 @@ const DatabaseTabs = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {data.map((student) => (
+              {data && data.map((student) => (
                 <tr key={student.id}>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     {student.id}
