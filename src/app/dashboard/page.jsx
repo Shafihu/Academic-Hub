@@ -56,7 +56,7 @@ const Dashboard = () => {
           {/* Search bar and user info */}
           <div className="hidden lg:flex lg:flex-row flex-col items-center justify-between lg:mb-10">
             <div className="relative shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg">
-              <input className="rounded-lg px-4 py-2 pl-10 text-indigo-600" placeholder="Search" />
+              <input className="rounded-md px-4 py-2 pl-10 text-indigo-600 border focus:outline-none focus:border-indigo-500" placeholder="Search" />
               <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-indigo-600 text-[18px]" />
             </div>
             <div className="lg:flex items-center justify-between gap-5 hidden">
