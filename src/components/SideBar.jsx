@@ -21,26 +21,26 @@ const SideBar = () => {
   const router = useRouter();
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (authUser) => {
-      if (authUser) {
-        setUser(authUser);
-      }else {
-        setUser(null)
-      }
-    })
-    return () => unsubscribe();
-}, [])
+//   useEffect(() => {
+//     const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (authUser) => {
+//       if (authUser) {
+//         setUser(authUser);
+//       }else {
+//         setUser(null)
+//       }
+//     })
+//     return () => unsubscribe();
+// }, [])
 
   const handleLinkClick = (index) => {
     setActiveLink(index);
   };
 
-  if(!user) {
-    return ;
-  }
+  // if(!user) {
+  //   return ;
+  // }
 
-  if (user) {
+  // if (user) {
 
   return(
 
@@ -266,7 +266,7 @@ type="button" onClick={() =>{
     </div>
   )
 
-}
+// }
 
 };
 
