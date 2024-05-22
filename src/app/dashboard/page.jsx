@@ -73,7 +73,7 @@ const Dashboard = () => {
           </div>
 
           {/* Revenue and upcoming events */}
-          <div className="flex-col h-[330px] flex xl:flex-row mb-32 xl:my-0 justify-between items-center gap-5 rounded-xl">
+          <div className="flex-col h-[330px] flex xl:flex-row mb-32 xl:my-0 justify-between items-start gap-5 rounded-xl">
             <div className="w-full md:flex-[0.7] h-fit shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
               <div className="mb-6 flex items-center justify-between">
                 <p className="text-indigo-500 font-semibold">Revenue</p>
@@ -108,7 +108,7 @@ const Dashboard = () => {
                 <DatabaseTabs />
               </div>
             </div>
-            <div className="w-full md:flex-[0.3] min-h-[330px] shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
+            <div className="w-full md:flex-[0.3]  shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
               <p className="text-indigo-500 font-semibold">Announcements</p>
             </div>
           </div>
