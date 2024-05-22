@@ -81,8 +81,20 @@ const Dashboard = () => {
               </div>
               <Revenue year={selectedYear} />
             </div>
-            <div className="w-full md:flex-[0.3] h-full shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
-              <p className="text-indigo-500 font-semibold">Upcoming Events</p>
+            <div className="w-full md:flex-[0.3] h-fit shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
+              <p className="text-indigo-500 font-semibold mb-4">Upcoming Events</p>
+              <div className="h-full flex flex-col gap-4">
+                <div className="flex flex-row items-center justify-between text-[14px]">
+                  <p>20/03/2024</p>
+                  <p className="text-indigo-600 font-medium">Sports Day</p>
+                  <p>10:00 am - 12:00 pm</p>
+                </div>
+                <div className="flex flex-row items-center justify-between text-[14px]">
+                  <p>20/03/2024</p>
+                  <p className="text-indigo-600 font-medium">Sports Day</p>
+                  <p>10:00 am - 12:00 pm</p>
+                </div>
+              </div>
             </div>
           </div>
 
