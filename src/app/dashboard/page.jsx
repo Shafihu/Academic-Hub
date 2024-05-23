@@ -87,12 +87,12 @@ const Dashboard = () => {
                 <div className="flex flex-row items-center justify-between text-[14px]">
                   <p className="whitespace-nowrap text-[13px] font-semibold text-gray-500">20/03/2024</p>
                   <p className="flex-1 text-center text-indigo-600 font-medium">Sports Day</p>
-                  <p className="whitespace-nowrap text-[13px] font-semibold text-gray-500">10:00 am - 12:00 pm</p>
+                  <p className="whitespace-nowrap text-[13px] font-semibold text-gray-500">10:00am - 12:00pm</p>
                 </div>
                 <div className="flex flex-row items-center justify-between text-[14px] gap-1">
                   <p className="whitespace-nowrap text-[13px] font-semibold text-gray-500">20/03/2024</p>
                   <p className="flex-1 text-center text-indigo-600 font-medium whitespace-nowrap">PTA Meeting</p>
-                  <p className="whitespace-nowrap text-[13px] font-semibold text-gray-500">10:00 am-12:00 pm</p>
+                  <p className="whitespace-nowrap text-[13px] font-semibold text-gray-500">10:00am - 12:00pm</p>
                 </div>
               </div>
             </div>

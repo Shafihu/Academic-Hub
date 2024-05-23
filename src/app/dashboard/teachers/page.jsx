@@ -23,7 +23,7 @@ const page = () => {
   const data = mockTeachersData();
 
   return (
-    <div className='flex flex-col flex-1 w-3.4/4 h-screen overflow-auto p-8 gap-10'>
+    <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[70px] lg:pt-8 relative gap-10 '>
       <div className='flex gap-5'>
         <button className='bg-indigo-600 text-white font-semibold rounded-lg py-2 px-4'>Add Teacher</button>
         <button className='font-semibold text-indigo-600'>Export CSV</button>
@@ -34,7 +34,7 @@ const page = () => {
           <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-indigo-600 text-[18px]" />
       </div>
 
-      <div className="flex justify-center">
+      <div className="overflow-x-auto">
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
