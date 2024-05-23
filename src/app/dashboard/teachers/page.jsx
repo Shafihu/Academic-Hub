@@ -23,7 +23,7 @@ const page = () => {
   const data = mockTeachersData();
 
   return (
-    <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[70px] lg:pt-8 relative gap-10 '>
+    <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[80px] lg:pt-8 relative gap-6 '>
       <div className='flex gap-5'>
         <button className='bg-indigo-600 text-white font-semibold rounded-lg py-2 px-4'>Add Teacher</button>
         <button className='font-semibold text-indigo-600'>Export CSV</button>
