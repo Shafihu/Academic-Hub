@@ -1,5 +1,7 @@
 'use client';
 
+import mockTeachersData from "./mockTeachersData";
+
 // Mock data function
 function mockGetData(tab) {
   const Students = [
@@ -10,11 +12,7 @@ function mockGetData(tab) {
     { id: 5, name: 'Tom Brown', class: '10B', yearJoined: 2018, contact: '555-6789' },
   ];
 
-  const Teachers = [
-    { id: 1, name: 'Mr. Sam Wilson', class: '11C', yearJoined: 2017, contact: '555-8765' },
-    { id: 2, name: 'Mrs. Lisa Johnson', class: '12A', yearJoined: 2016, contact: '555-4321' },
-    { id: 3, name: 'Mr. Tom Brown', class: '10B', yearJoined: 2018, contact: '555-6789' }
-  ];
+  const Teachers = mockTeachersData();
 
   const Employees = [
     { id: 1, name: 'Mr. Sam Wilson', yearJoined: 2017, contact: '555-8765' },

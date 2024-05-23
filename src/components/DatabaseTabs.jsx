@@ -34,7 +34,7 @@ const DatabaseTabs = () => {
   );
 
   return (
-    <div className="px-4">
+    <div className="">
       <div className="flex flex-row justify-between items-center mb-4">
         <input
           type="text"
@@ -67,7 +67,7 @@ const DatabaseTabs = () => {
       </div>
 
       {loading ? (
-        <div className="flex justify-center items-center min-h-[330px]">
+        <div className="flex justify-center items-center ">
           <ButtonLoader color="border-indigo-500" />
         </div>
       ) : (
@@ -95,22 +95,22 @@ const DatabaseTabs = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {filteredData.map((student) => (
-                    <tr key={student.id}>
+                  {filteredData.map((item) => (
+                    <tr key={item.id}>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        {student.id}
+                        {item.id}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {student.name}
+                        {item.name}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {student.class}
+                        {item.class}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {student.yearJoined}
+                        {item.yearJoined}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {student.contact}
+                        {item.contact}
                       </td>
                     </tr>
                   ))}

@@ -99,8 +99,8 @@ const Dashboard = () => {
           </div>
 
           {/* Database and announcements */}
-          <div className="flex-col  flex xl:flex-row justify-between items-start gap-5 xl:my-7 rounded-xl">
-            <div className="w-full min-h-[330px] md:flex-[0.7] h-full shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
+          <div className="flex-col min-h-[330px]  flex xl:flex-row justify-between items-start gap-5 xl:my-7 rounded-xl">
+            <div className="w-full  md:flex-[0.7] h-full shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7 pb-0">
               <div className="mb-6">
                 <p className="text-indigo-500 font-semibold">Database</p>
               </div>

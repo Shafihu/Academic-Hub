@@ -13,25 +13,29 @@ const Page = () => {
 
   const handleDownload = () => {
     const headers = [
+      { label: "Id", key: "id" },
       { label: "Name", key: "name" },
       { label: "Subject", key: "subject" },
       { label: "Class", key: "class" },
       { label: "Email Address", key: "email" },
       { label: "Gender", key: "gender" },
+      { label: "Year_Joined", key: "yearJoined" },
       { label: "Salary", key: "salary" },
-      { label: "Phone Number", key: "phoneNumber" },
+      { label: "Contact", key: "contact" },
     ];
 
     const csvString = Papa.unparse({
       fields: headers.map(header => header.label),
       data: teachersData.map(teacher => [
+        teacher.id,
         teacher.name,
         teacher.subject,
         teacher.class,
         teacher.email,
         teacher.gender,
+        teacher.yearJoined,
         teacher.salary,
-        teacher.phoneNumber,
+        teacher.contact,
       ])
     });
 
@@ -71,7 +75,7 @@ const Page = () => {
         <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-indigo-600 text-[18px]" />
       </div>
 
-      {loading ? <div>Loading...</div> : (
+      {loading ? <div className='text-gray-400 text-[15px]'>Loading...</div> : (
         <div className="overflow-x-auto">
           {teachersData.length > 0 ? (
             <>
@@ -97,7 +101,7 @@ const Page = () => {
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.email}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.gender}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.salary}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.phoneNumber}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.contact}</td>
                     </tr>
                   ))}
                 </tbody>
