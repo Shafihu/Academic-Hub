@@ -10,6 +10,7 @@ const Page = () => {
   const [user, setUser] = useState(null);
   const [teachersData, setTeachersData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('')
 
   const handleDownload = () => {
     const headers = [
@@ -63,6 +64,16 @@ const Page = () => {
     fetchTeachers();
   }, []);
 
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  }
+
+  const filteredData = teachersData.filter((item) =>
+    Object.values(item).some((value) =>
+      value.toString().toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+
   return (
     <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[80px] lg:pt-8 relative gap-6 '>
       <div className='flex gap-5'>
@@ -71,13 +82,13 @@ const Page = () => {
       </div>
 
       <div className="relative rounded-lg">
-        <input className="rounded-md border px-4 py-2 pl-10 text-indigo-600 focus:outline-none focus:border-indigo-500 w-full" placeholder="Search for teacher by name or email" />
+        <input className="rounded-md border px-4 py-2 pl-10 text-indigo-600 focus:outline-none focus:border-indigo-500 w-full" placeholder="Search for teacher by name or email" value={searchQuery} onChange={handleSearchChange}/>
         <BiSolidSearchAlt2 className="absolute left-[10px] top-[50%] -translate-y-[50%] text-indigo-600 text-[18px]" />
       </div>
 
       {loading ? <div className='text-gray-400 text-[15px]'>Loading...</div> : (
         <div className="overflow-x-auto">
-          {teachersData.length > 0 ? (
+          {filteredData.length > 0 ? (
             <>
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
@@ -93,7 +104,7 @@ const Page = () => {
                 </thead>
 
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {teachersData.map((row, index) => (
+                  {filteredData.map((row, index) => (
                     <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-violet-50'}>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600">{row.name}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.subject}</td>
