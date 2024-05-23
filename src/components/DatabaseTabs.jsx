@@ -96,7 +96,7 @@ const DatabaseTabs = () => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {filteredData.map((item) => (
-                    <tr key={item.id}>
+                    <tr key={item.id} className='cursor-pointer hover:scale-[1.02] hover:bg-indigo-50'>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         {item.id}
                       </td>

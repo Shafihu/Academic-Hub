@@ -93,6 +93,7 @@ const Page = () => {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
+                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider">Id</th>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider">Name</th>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider">Subject</th>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider">Class</th>
@@ -105,7 +106,8 @@ const Page = () => {
 
                 <tbody className="bg-white divide-y divide-gray-200">
                   {filteredData.map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-violet-50'}>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-white cursor-pointer hover:scale-[1.02]' : 'bg-violet-50 cursor-pointer hover:scale-[1.02]' }>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600">{row.id}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600">{row.name}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.subject}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.class}</td>
