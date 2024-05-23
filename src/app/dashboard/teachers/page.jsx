@@ -7,20 +7,27 @@ import mockTeachersData from '@/utils/mockTeachersData';
 
 const page = () => {
   const [user, setUser] = useState(null);
+  const [teachersData, setTeachersData] = useState(null)
 
-  useEffect(() => {
-    const userInfoString = sessionStorage.getItem('userInfo');
-    if (userInfoString) {
-      const user = JSON.parse(userInfoString);
-      setUser(user);
+  // useEffect(() => {
+  //   const userInfoString = sessionStorage.getItem('userInfo');
+  //   if (userInfoString) {
+  //     const user = JSON.parse(userInfoString);
+  //     setUser(user);
+  //   }
+  // }, []); 
+
+  // if (!user) {
+  //   return <Custom404 />
+  // }
+
+  useEffect(()=>{
+    const fetchTeachers = async () => {
+      const res = await mockTeachersData();
+      setTeachersData(res);
     }
-  }, []); 
-
-  if (!user) {
-    return <Custom404 />
-  }
-
-  const data = mockTeachersData();
+    fetchTeachers();
+  },[])
 
   return (
     <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[80px] lg:pt-8 relative gap-6 '>
@@ -35,6 +42,8 @@ const page = () => {
       </div>
 
       <div className="overflow-x-auto">
+        {teachersData > 0 ? (
+      <>
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
@@ -47,8 +56,9 @@ const page = () => {
             <th className="px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider">Phone Number</th>
           </tr>
         </thead>
+
         <tbody className="bg-white divide-y divide-gray-200">
-          {data.map((row, index) => (
+          {teachersData.map((row, index) => (
             <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-violet-50'}>
               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600">{row.name}</td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.subject}</td>
@@ -61,6 +71,10 @@ const page = () => {
           ))}
         </tbody>
       </table>
+      </>
+        )
+         : 
+        (<div className='text-gray-300 text-[15px]'>No teachers found!</div>)}
     </div>
     </div>
   )

@@ -20,9 +20,13 @@ const mockTeachersData = () => {
           salary: '$5500',
           phoneNumber: '123-456-7891',
         },
-        // Add more data as needed
+        
       ];
-  return data;
+  return new Promise((resolve)=>{
+    setTimeout(()=>{
+      resolve(data)
+    }, 1000)
+  });
 }
 
 export default mockTeachersData
