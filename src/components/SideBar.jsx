@@ -17,7 +17,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 
 const SideBar = () => {
-  const [activeLink, setActiveLink] = useState(1);
+  const [activeLink, setActiveLink] = useState(0);
   const router = useRouter();
   const [user, setUser] = useState(null);
 
