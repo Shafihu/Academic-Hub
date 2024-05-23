@@ -7,6 +7,7 @@ function mockGetData(tab) {
   const Students = [
     {
       id: 1,
+      img: '/profilePicAlt.png',
       name: 'Kwame Osei',
       class: '10A',
       email: 'kwame.osei@student.com',
@@ -16,6 +17,7 @@ function mockGetData(tab) {
     },
     {
       id: 2,
+      img: '/profilePicAlt.png',
       name: 'Akua Addo',
       class: '10B',
       email: 'akua.addo@student.com',
@@ -25,6 +27,7 @@ function mockGetData(tab) {
     },
     {
       id: 3,
+      img: '/profilePicAlt.png',
       name: 'Yaw Mensah',
       class: '10C',
       email: 'yaw.mensah@student.com',
@@ -34,6 +37,7 @@ function mockGetData(tab) {
     },
     {
       id: 4,
+      img: '/profilePicAlt.png',
       name: 'Ama Kofi',
       class: '10D',
       email: 'ama.kofi@student.com',
@@ -43,6 +47,7 @@ function mockGetData(tab) {
     },
     {
       id: 5,
+      img: '/profilePicAlt.png',
       name: 'Kojo Owusu',
       class: '10E',
       email: 'kojo.owusu@student.com',
@@ -52,6 +57,7 @@ function mockGetData(tab) {
     },
     {
       id: 6,
+      img: '/profilePicAlt.png',
       name: 'Efua Amponsah',
       class: '11A',
       email: 'efua.amponsah@student.com',
@@ -61,6 +67,7 @@ function mockGetData(tab) {
     },
     {
       id: 7,
+      img: '/profilePicAlt.png',
       name: 'Kofi Boateng',
       class: '11B',
       email: 'kofi.boateng@student.com',
@@ -70,6 +77,7 @@ function mockGetData(tab) {
     },
     {
       id: 8,
+      img: '/profilePicAlt.png',
       name: 'Adjoa Asante',
       class: '11C',
       email: 'adjoa.asante@student.com',
@@ -79,6 +87,7 @@ function mockGetData(tab) {
     },
     {
       id: 9,
+      img: '/profilePicAlt.png',
       name: 'Nana Yaa Badu',
       class: '11D',
       email: 'nana.yaa.badu@student.com',
@@ -88,6 +97,7 @@ function mockGetData(tab) {
     },
     {
       id: 10,
+      img: '/profilePicAlt.png',
       name: 'Kojo Ababio',
       class: '11E',
       email: 'kojo.ababio@student.com',
@@ -101,8 +111,8 @@ function mockGetData(tab) {
   const Teachers = mockTeachersData();
 
   const Employees = [
-    { id: 1, name: 'Mr. Sam Wilson', yearJoined: 2017, contact: '555-8765' },
-    { id: 2, name: 'Mrs. Lisa Johnson', yearJoined: 2016, contact: '555-4321' },
+    { id: 1, img: '/profilePicAlt.png', name: 'Mr. Sam Wilson', yearJoined: 2017, contact: '555-8765' },
+    { id: 2, img: '/profilePicAlt.png', name: 'Mrs. Lisa Johnson', yearJoined: 2016, contact: '555-4321' },
   ];
 
   return new Promise((resolve) => {

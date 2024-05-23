@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { BiSolidSearchAlt2 } from "react-icons/bi";
 import mockTeachersData from '@/utils/mockTeachersData';
 import Papa from 'papaparse';
+import Image from 'next/image';
 
 const Page = () => {
   const [user, setUser] = useState(null);
@@ -108,7 +109,7 @@ const Page = () => {
                   {filteredData.map((row, index) => (
                     <tr key={index} className={index % 2 === 0 ? 'bg-white cursor-pointer hover:scale-[1.02]' : 'bg-violet-50 cursor-pointer hover:scale-[1.02]' }>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600">{row.id}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600">{row.name}</td>
+                      <td className="flex items-center gap-3 px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600"><Image src={row.img} width={30} height={30}/> {row.name}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.subject}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.class}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.email}</td>

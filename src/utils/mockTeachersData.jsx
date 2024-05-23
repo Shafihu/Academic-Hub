@@ -2,6 +2,7 @@ const mockTeachersData = () => {
   const data = [
     {
       id: 1,
+      img: '/profilePicAlt.png',
       name: 'Agyemang Yaw',
       subject: 'Mathematics',
       class: '10A',
@@ -13,6 +14,7 @@ const mockTeachersData = () => {
     },
     {
       id: 2,
+      img: '/profilePicAlt.png',
       name: 'Christabel Boadu',
       subject: 'English',
       class: '10B',
@@ -24,6 +26,7 @@ const mockTeachersData = () => {
     },
     {
       id: 3,
+      img: '/profilePicAlt.png',
       name: 'Kwame Asante',
       subject: 'Science',
       class: '10C',
@@ -35,6 +38,7 @@ const mockTeachersData = () => {
     },
     {
       id: 4,
+      img: '/profilePicAlt.png',
       name: 'Akua Mensah',
       subject: 'Biology',
       class: '11A',
@@ -46,6 +50,7 @@ const mockTeachersData = () => {
     },
     {
       id: 5,
+      img: '/profilePicAlt.png',
       name: 'Yaw Owusu',
       subject: 'Chemistry',
       class: '11B',
@@ -57,6 +62,7 @@ const mockTeachersData = () => {
     },
     {
       id: 6,
+      img: '/profilePicAlt.png',
       name: 'Ama Ofori',
       subject: 'Physics',
       class: '12A',
@@ -68,6 +74,7 @@ const mockTeachersData = () => {
     },
     {
       id: 7,
+      img: '/profilePicAlt.png',
       name: 'Kojo Adjei',
       subject: 'History',
       class: '10D',
@@ -79,6 +86,7 @@ const mockTeachersData = () => {
     },
     {
       id: 8,
+      img: '/profilePicAlt.png',
       name: 'Efua Amankwah',
       subject: 'Geography',
       class: '11C',
@@ -90,6 +98,7 @@ const mockTeachersData = () => {
     },
     {
       id: 9,
+      img: '/profilePicAlt.png',
       name: 'Kofi Boateng',
       subject: 'Mathematics',
       class: '12B',
@@ -101,6 +110,7 @@ const mockTeachersData = () => {
     },
     {
       id: 10,
+      img: '/profilePicAlt.png',
       name: 'Adjoa Agyeman',
       subject: 'Economics',
       class: '10E',
@@ -112,6 +122,7 @@ const mockTeachersData = () => {
     },
     {
       id: 11,
+      img: '/profilePicAlt.png',
       name: 'Mensah Nkrumah',
       subject: 'Political Science',
       class: '11D',
@@ -123,6 +134,7 @@ const mockTeachersData = () => {
     },
     {
       id: 12,
+      img: '/profilePicAlt.png',
       name: 'Nana Yaa Boadu',
       subject: 'Literature',
       class: '12C',

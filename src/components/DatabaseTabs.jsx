@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import mockGetData from '@/utils/mockGetData';
 import ButtonLoader from '@/components/ButtonLoader';
+import Image from 'next/image';
 
 const DatabaseTabs = () => {
   const [tab, setTab] = useState('Students');
@@ -100,7 +101,12 @@ const DatabaseTabs = () => {
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         {item.id}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className=" flex items-center gap-3 px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <Image
+                          src={item.img}
+                          width={30}
+                          height={30}
+                        />
                         {item.name}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
