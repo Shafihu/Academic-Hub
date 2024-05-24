@@ -25,7 +25,7 @@ const Announcement = () => {
                     <div className='p-2 rounded-b-xl bg-white'>
                         <div>
                             <p className='text-indigo-600 font-medium text-[15px]'>{item.title}</p>
-                            <p className='text-[13.5px] text-gray-600'>{item.subTitle}</p>
+                            <p className='text-[13.5px] text-gray-500'>{item.subTitle}</p>
                         </div>
                         <p className='text-[13.5px] text-right text-gray-400'>{item.date}</p>
                      </div>
