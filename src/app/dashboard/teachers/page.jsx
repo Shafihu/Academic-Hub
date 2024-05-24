@@ -6,6 +6,7 @@ import mockTeachersData from '@/utils/mockTeachersData';
 import Papa from 'papaparse';
 import Image from 'next/image';
 import TeacherForm from '@/components/TeacherForm';
+import { useRouter } from 'next/navigation';
 
 const Page = () => {
   const [user, setUser] = useState(null);
@@ -15,6 +16,16 @@ const Page = () => {
   const [formToggle, setFormToggle] = useState(false);
 
   const formRef = useRef(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const userInfo = sessionStorage.getItem('userInfo');
+    if (!userInfo) {
+      router.push('/auth/login');
+    } else {
+      setUser(userInfo);
+    }
+  }, [router]);
 
   const handleDownload = () => {
     const headers = [
@@ -24,7 +35,7 @@ const Page = () => {
       { label: 'Class', key: 'class' },
       { label: 'Email Address', key: 'email' },
       { label: 'Gender', key: 'gender' },
-      { label: 'Year_Joined', key: 'yearJoined' },
+      { label: 'Year Joined', key: 'yearJoined' },
       { label: 'Salary', key: 'salary' },
       { label: 'Contact', key: 'contact' },
     ];
@@ -100,6 +111,7 @@ const Page = () => {
     };
   }, [formToggle]);
 
+
   return (
     <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[80px] lg:pt-8 relative gap-6'>
       {formToggle && (
@@ -139,82 +151,80 @@ const Page = () => {
       ) : (
         <div className='overflow-x-auto'>
           {filteredData.length > 0 ? (
-            <>
-              <table className='min-w-full divide-y divide-gray-200'>
-                <thead className='bg-gray-50'>
-                  <tr>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Id
-                    </th>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Name
-                    </th>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Subject
-                    </th>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Class
-                    </th>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Email Address
-                    </th>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Gender
-                    </th>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Salary
-                    </th>
-                    <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
-                      Phone Number
-                    </th>
-                  </tr>
-                </thead>
+            <table className='min-w-full divide-y divide-gray-200'>
+              <thead className='bg-gray-50'>
+                <tr>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Id
+                  </th>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Name
+                  </th>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Subject
+                  </th>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Class
+                  </th>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Email Address
+                  </th>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Gender
+                  </th>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Salary
+                  </th>
+                  <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
+                    Phone Number
+                  </th>
+                </tr>
+              </thead>
 
-                <tbody className='bg-white divide-y divide-gray-200'>
-                  {filteredData.map((row, index) => (
-                    <tr
-                      key={index}
-                      className={
-                        index % 2 === 0
-                          ? 'bg-white cursor-pointer hover:scale-[1.02] transition-transform transform'
-                          : 'bg-violet-50 cursor-pointer hover:scale-[1.02] transition-transform transform'
-                      }
-                    >
-                      <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600'>
-                        {row.id}
-                      </td>
-                      <td className='flex items-center gap-3 px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600'>
-                        <Image
-                          src={row.img}
-                          alt='user profile picture'
-                          width={30}
-                          height={30}
-                        />{' '}
-                        {row.name}
-                      </td>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
-                        {row.subject}
-                      </td>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
-                        {row.class}
-                      </td>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
-                        {row.email}
-                      </td>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
-                        {row.gender}
-                      </td>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
-                        {row.salary}
-                      </td>
-                      <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
-                        {row.contact}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </>
+              <tbody className='bg-white divide-y divide-gray-200'>
+                {filteredData.map((row, index) => (
+                  <tr
+                    key={index}
+                    className={
+                      index % 2 === 0
+                        ? 'bg-white cursor-pointer hover:scale-[1.02] transition-transform transform'
+                        : 'bg-violet-50 cursor-pointer hover:scale-[1.02] transition-transform transform'
+                    }
+                  >
+                    <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600'>
+                      {row.id}
+                    </td>
+                    <td className='flex items-center gap-3 px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600'>
+                      <Image
+                        src={row.img}
+                        alt='user profile picture'
+                        width={30}
+                        height={30}
+                      />{' '}
+                      {row.name}
+                    </td>
+                    <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
+                      {row.subject}
+                    </td>
+                    <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
+                      {row.class}
+                    </td>
+                    <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
+                      {row.email}
+                    </td>
+                    <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
+                      {row.gender}
+                    </td>
+                    <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
+                      {row.salary}
+                    </td>
+                    <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
+                      {row.contact}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           ) : (
             <div className='text-gray-300 text-[15px]'>No teachers found!</div>
           )}
