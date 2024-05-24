@@ -78,8 +78,8 @@ const Page = () => {
   return (
     <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[80px] lg:pt-8 relative gap-6 '>
       <div className='flex gap-5'>
-        <button className='bg-indigo-600 text-white font-semibold rounded-lg py-2 px-4'>Add Teacher</button>
-        <button className='font-semibold text-indigo-600' onClick={handleDownload}>Export CSV</button>
+        <button className='bg-indigo-600 text-white font-semibold rounded-lg py-2 px-4 hover:bg-indigo-500'>Add Teacher</button>
+        <button className='font-semibold text-indigo-600 border-[2px] rounded-md hover:border-indigo-600 py-2 px-4' onClick={handleDownload}>Export CSV</button>
       </div>
 
       <div className="relative rounded-lg">
