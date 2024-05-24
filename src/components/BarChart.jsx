@@ -33,7 +33,7 @@ export default function BarChart() {
         label: "Income",
         data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
         backgroundColor: [
-          'rgb(255, 99, 132, 0.5)',
+          'rgb(255, 99, 132, 0.8)',
         ],
         borderColor: [
           'rgb(255, 99, 132)',
@@ -49,7 +49,7 @@ export default function BarChart() {
         label: "Expenses",
         data: [75, 65, 78, 60, 62, 59, 80, 65, 59, 80, 81, 56],
         backgroundColor: [
-          'rgb(54, 162, 235, 0.5)',
+          'rgb(54, 162, 235, 0.8)',
         ],
         borderColor: [
           'rgb(54, 162, 235)',
