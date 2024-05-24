@@ -35,11 +35,11 @@ const DatabaseTabs = () => {
   );
 
   return (
-    <div className="">
-      <div className="flex flex-row justify-between items-center mb-4">
+    <div >
+      <div className="flex flex-row justify-between items-center mb-5">
         <input
           type="text"
-          className="border border-gray-300 py-1 pl-2 rounded-sm text-indigo-500 text-sm focus:outline-none focus:border-indigo-500"
+          className="border border-gray-300 py-1 pl-2 rounded-sm text-indigo-500 text-sm focus:outline-none focus:border-indigo-500 flex-[0.8]"
           placeholder="Search"
           value={searchQuery}
           onChange={handleSearchChange}
@@ -97,7 +97,7 @@ const DatabaseTabs = () => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {filteredData.map((item) => (
-                    <tr key={item.id} className='cursor-pointer hover:scale-[1.02] hover:bg-indigo-50'>
+                    <tr key={item.id} className='cursor-pointer hover:scale-[1.02] hover:bg-indigo-50 transition-transform transform'>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         {item.id}
                       </td>

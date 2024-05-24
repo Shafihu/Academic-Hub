@@ -107,7 +107,7 @@ const Page = () => {
 
                 <tbody className="bg-white divide-y divide-gray-200">
                   {filteredData.map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white cursor-pointer hover:scale-[1.02]' : 'bg-violet-50 cursor-pointer hover:scale-[1.02]' }>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-white cursor-pointer hover:scale-[1.02] transition-transform transform' : 'bg-violet-50 cursor-pointer hover:scale-[1.02] transition-transform transform' }>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600">{row.id}</td>
                       <td className="flex items-center gap-3 px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600"><Image src={row.img} width={30} height={30}/> {row.name}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-indigo-500">{row.subject}</td>

@@ -64,10 +64,10 @@ const SideBar = () => {
       <div className="pl-8 flex flex-col ">
         <Link
           href="/dashboard"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(0)}
         >
-          <MdSpaceDashboard className="text-[18px]" />
+          <MdSpaceDashboard className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Dashboard</p>
           {activeLink === 0 && (
             <>
@@ -85,10 +85,10 @@ const SideBar = () => {
 
         <Link
           href='/dashboard/teachers'
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(1)}
         >
-          <FaChalkboardTeacher className="text-[18px]" />
+          <FaChalkboardTeacher className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Teachers</p>
           {activeLink === 1 && (
             <>
@@ -106,10 +106,10 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/students"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(2)}
         >
-          <PiStudentFill className="text-[18px]" />
+          <PiStudentFill className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Students / Classes</p>
           {activeLink === 2 && (
             <>
@@ -127,10 +127,10 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/billings"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(3)}
         >
-          <FaWallet className="text-[18px]" />
+          <FaWallet className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Billings</p>
           {activeLink === 3 && (
             <>
@@ -148,10 +148,10 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/exams"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(4)}
         >
-          <PiExamFill className="text-[18px]" />
+          <PiExamFill className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Exams</p>
           {activeLink === 4 && (
             <>
@@ -169,10 +169,10 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/admission-form"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(5)}
         >
-          <SiGoogledocs className="text-[18px]" />
+          <SiGoogledocs className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Admission Form</p>
           {activeLink === 5 && (
             <>
@@ -190,10 +190,10 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/admission-form-list"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(6)}
         >
-          <SiGoogledocs className="text-[18px]" />
+          <SiGoogledocs className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Admission Form List</p>
           {activeLink === 6 && (
             <>
@@ -211,10 +211,10 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/events"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(7)}
         >
-          <BsFillCalendarEventFill className="text-[18px]" />
+          <BsFillCalendarEventFill className="text-[18px] group-hover:scale-125 transition-transform transform" />
           <p>Events</p>
           {activeLink === 7 && (
             <>
@@ -232,10 +232,10 @@ const SideBar = () => {
 
         <Link
           href="/dashboard/settings&profile"
-          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)]"
+          className="relative flex justify-start items-center gap-4 text-white text-medium text-[14px] py-3 hover:bg-[rgba(255,255,255,0.1)] group"
           onClick={() => handleLinkClick(8)}
         >
-          <MdSettings className="text-[20px]" />
+          <MdSettings className="text-[20px] group-hover:scale-125 transition-transform transform" />
           <p>Settings & Profile</p>
           {activeLink === 8 && (
             <>
@@ -259,7 +259,7 @@ type="button" onClick={() =>{
            signOut(FIREBASE_AUTH);
            router.push('/auth/login')
            }}>
-            <RiLogoutBoxFill className="text-[20px]" />
+            <RiLogoutBoxFill className="text-[20px] group-hover:scale-125 transition-transform transform" />
             Logout
           </button>
 </div>

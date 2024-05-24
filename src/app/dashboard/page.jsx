@@ -11,6 +11,7 @@ import Calendar from "@/components/Calendar";
 import Revenue from "@/components/Revenue";
 import DatabaseTabs from "@/components/DatabaseTabs";
 import Events from "@/components/Events";
+import Announcement from "@/components/Announcement";
 
 /**
  * Dashboard Component
@@ -97,8 +98,9 @@ const Dashboard = () => {
                 <DatabaseTabs />
               </div>
             </div>
-            <div className="w-full md:flex-[0.3]  shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
-              <p className="text-indigo-500 font-semibold">Announcements</p>
+            <div className="w-full md:flex-[0.3] bg-white h-fit shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
+              <p className="text-indigo-500 font-semibold mb-6">Announcements</p>
+              <Announcement />
             </div>
           </div>
         </div>

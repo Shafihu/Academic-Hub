@@ -17,7 +17,7 @@ const QuickInfoBoard = () => {
         </div>
       </div>
 
-      <div className="border-2 border-[#FB7D5B] flex flex-col sm:flex sm:flex-row  items-center w-[200px] sm:w-[260px] md:w-[260px] py-4 justify-evenly rounded-xl">
+      <div className="border-2 border-[#fb7d5b] flex flex-col sm:flex sm:flex-row  items-center w-[200px] sm:w-[260px] md:w-[260px] py-4 justify-evenly rounded-xl">
         <div className="text-[#FB7D5B] text-[60px]">
           <IoIosPeople />
         </div>
