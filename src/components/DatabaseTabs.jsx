@@ -106,6 +106,7 @@ const DatabaseTabs = () => {
                           src={item.img}
                           width={30}
                           height={30}
+                          alt='user pic'
                         />
                         {item.name}
                       </td>

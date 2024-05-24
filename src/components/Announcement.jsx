@@ -20,7 +20,7 @@ const Announcement = () => {
             announcementsData.map((item, index) => (
                 <div key={index} className='rounded-xl border border-gray-300 overflow-hidden cursor-pointer group'>
                     <div className='bg-white overflow-hidden h-[100px] rounded-t-xl'>
-                        <Image src={item.img} width={1000} height={1000} className='h-full w-full object-cover rounded-t-xl transition-transform transform group-hover:scale-110'/>
+                        <Image src={item.img} alt='announcement pic' width={1000} height={1000} className='h-full w-full object-cover rounded-t-xl transition-transform transform group-hover:scale-110'/>
                     </div>
                     <div className='p-2 rounded-b-xl bg-white'>
                         <div>
