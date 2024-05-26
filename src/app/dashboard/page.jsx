@@ -82,7 +82,7 @@ const Dashboard = () => {
               </div>
               <Revenue year={selectedYear} />
             </div>
-            <div className="w-full md:flex-[0.3] h-fit shadow-[rgba(17,_17,_26,_0.15)_0px_0px_8px] rounded-xl p-7">
+            <div className="w-full md:flex-[0.3] h-full bg-[#FB7D5B]/10 overflow-y-auto  rounded-xl p-7 pb-0">
               <p className="text-indigo-500 font-semibold mb-6">Upcoming Events</p>
               <Events />
             </div>
