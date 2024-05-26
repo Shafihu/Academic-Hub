@@ -4,18 +4,24 @@ import Image from "next/image";
 
 const Events = () => {
     const [eventsData, setEventsData] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        setLoading(true)
         const fetchEvents = async () => {
             const res = await mockEventsData();
             setEventsData(res);
+            setLoading(false)
         };
         fetchEvents();
     }, []);
 
     return (
         <div className="">
-            {eventsData.length > 0 ? (
+            {loading ? <p className="italic text-gray-400 text-[13px]">Fetching...</p> 
+                : (
+                    <div>
+                                    {eventsData.length > 0 ? (
                 eventsData.map((item, index) => (
                     <div key={index} className="flex flex-row justify-between items-center mb-4 bg-white p-2 rounded-lg cursor-pointer group max-h-[100px] gap-2">
                         <div className="bg-white rounded-lg w-[130px] h-[80px] group-hover:scale-125 transition-transform transform">
@@ -39,6 +45,9 @@ const Events = () => {
             ) : (
                 <p>No events available!</p>
             )}
+                    </div>
+                )
+            }
         </div>
 
     );
