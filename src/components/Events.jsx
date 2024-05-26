@@ -17,7 +17,7 @@ const Events = () => {
     }, []);
 
     return (
-        <div className="">
+        <div>
             {loading ? <p className="italic text-gray-400 text-[13px]">Fetching...</p> 
                 : (
                     <div>

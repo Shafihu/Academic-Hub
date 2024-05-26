@@ -152,7 +152,7 @@ const Page = () => {
         </div>
   
         {loading ? (
-          <div className='text-gray-400 text-[15px]'>Loading...</div>
+          <div className='italic text-gray-400 text-[13px]'>Fetching...</div>
         ) : (
           <div className='overflow-x-auto'>
             {filteredData.length > 0 ? (
