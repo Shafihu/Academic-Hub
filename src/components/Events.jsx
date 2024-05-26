@@ -17,7 +17,7 @@ const Events = () => {
         <div className="">
             {eventsData.length > 0 ? (
                 eventsData.map((item, index) => (
-                    <div key={index} className="flex flex-row justify-between items-center mb-5 bg-white p-2 rounded-lg cursor-pointer group">
+                    <div key={index} className="flex flex-row justify-between items-center mb-4 bg-white p-2 rounded-lg cursor-pointer group max-h-[100px] gap-2">
                         <div className="bg-white rounded-lg w-[130px] h-[80px] group-hover:scale-125 transition-transform transform">
                             <Image 
                                 src={item.img}
@@ -28,6 +28,11 @@ const Events = () => {
                                 objectFit="cover"
                                 objectPosition="center"
                             />
+                        </div>
+                        <div className="h-80px flex-1 group-hover:translate-x-4 transition-transform transform">
+                            <p className="text-orange-500 font-medium">{item.title}</p>
+                            <p className="text-[13px] text-gray-500 font-medium">{item.date}</p>
+                            <p className="text-[13px] text-gray-500 font-medium">{item.time}</p>
                         </div>
                     </div>
             ))
