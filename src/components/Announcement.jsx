@@ -14,8 +14,11 @@ const Announcement = () => {
         }
         fetchAnnouncements()
     },[])
+  
+
   return (
-    <div className='flex flex-col gap-4'>
+
+   <div className='flex flex-col gap-4'>
         {announcementsData.length > 0 ? (
             announcementsData.map((item, index) => (
                 <div key={index} className='rounded-xl border border-gray-300 overflow-hidden cursor-pointer group'>
@@ -35,9 +38,18 @@ const Announcement = () => {
          : ( 
             <div>No announcements available!</div>
             )
-         }
+         } 
+
     </div>
+
   )
 }
 
 export default Announcement
+
+
+
+
+
+
+ 
