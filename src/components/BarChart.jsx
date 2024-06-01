@@ -23,7 +23,7 @@ ChartJS.register(
   BarController,
 );
 
-export default function BarChart() {
+export default function BarChart({info}) {
 
 
   const data = {
