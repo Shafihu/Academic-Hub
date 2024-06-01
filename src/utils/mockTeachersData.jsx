@@ -9,7 +9,7 @@ const mockTeachersData = () => {
       email: 'agyemang.yaw@example.com',
       gender: 'Male',
       yearJoined: 2021,
-      salary: '₵ 5000',
+      salary: 5000,
       contact: '123-456-7890',
     },
     {
@@ -21,7 +21,7 @@ const mockTeachersData = () => {
       email: 'christabel.boadu@example.com',
       gender: 'Female',
       yearJoined: 2018,
-      salary: '₵ 5500',
+      salary: 4100,
       contact: '123-456-7891',
     },
     {
@@ -33,7 +33,7 @@ const mockTeachersData = () => {
       email: 'kwame.asante@example.com',
       gender: 'Male',
       yearJoined: 2019,
-      salary: '₵ 5200',
+      salary:  3250,
       contact: '123-456-7892',
     },
     {
@@ -45,7 +45,7 @@ const mockTeachersData = () => {
       email: 'akua.mensah@example.com',
       gender: 'Female',
       yearJoined: 2020,
-      salary: '₵ 5300',
+      salary: 6500,
       contact: '123-456-7893',
     },
     {
@@ -57,7 +57,7 @@ const mockTeachersData = () => {
       email: 'yaw.owusu@example.com',
       gender: 'Male',
       yearJoined: 2017,
-      salary: '₵ 5400',
+      salary:  4000,
       contact: '123-456-7894',
     },
     {
@@ -69,7 +69,7 @@ const mockTeachersData = () => {
       email: 'ama.ofori@example.com',
       gender: 'Female',
       yearJoined: 2016,
-      salary: '₵ 5600',
+      salary: 5600,
       contact: '123-456-7895',
     },
     {
@@ -81,7 +81,7 @@ const mockTeachersData = () => {
       email: 'kojo.adjei@example.com',
       gender: 'Male',
       yearJoined: 2021,
-      salary: '₵ 5100',
+      salary: 5100,
       contact: '123-456-7896',
     },
     {
@@ -93,7 +93,7 @@ const mockTeachersData = () => {
       email: 'efua.amankwah@example.com',
       gender: 'Female',
       yearJoined: 2018,
-      salary: '₵ 5500',
+      salary: 5500,
       contact: '123-456-7897',
     },
     {
@@ -105,7 +105,7 @@ const mockTeachersData = () => {
       email: 'kofi.boateng@example.com',
       gender: 'Male',
       yearJoined: 2015,
-      salary: '₵ 5700',
+      salary: 2800,
       contact: '123-456-7898',
     },
     {
@@ -117,7 +117,7 @@ const mockTeachersData = () => {
       email: 'adjoa.agyeman@example.com',
       gender: 'Female',
       yearJoined: 2019,
-      salary: '₵ 5200',
+      salary: 5200,
       contact: '123-456-7899',
     },
     {
@@ -129,7 +129,7 @@ const mockTeachersData = () => {
       email: 'mensah.nkrumah@example.com',
       gender: 'Male',
       yearJoined: 2020,
-      salary: '₵ 5300',
+      salary: 5300,
       contact: '123-456-7800',
     },
     {
@@ -141,7 +141,7 @@ const mockTeachersData = () => {
       email: 'nana.yaa.boadu@example.com',
       gender: 'Female',
       yearJoined: 2017,
-      salary: '₵ 5400',
+      salary: 5400,
       contact: '123-456-7801',
     }
     

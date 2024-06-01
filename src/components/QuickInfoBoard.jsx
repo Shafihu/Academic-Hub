@@ -27,13 +27,13 @@ const QuickInfoBoard = () => {
         </div>
       </div>
 
-      <div className="border-2 border-[#FCC43E] flex flex-col sm:flex sm:flex-row  items-center w-[200px] sm:w-[260px] md:w-[260px] py-4 justify-evenly rounded-xl">
+      <div className="border-2 border-[rgb(252,196,62)] flex flex-col sm:flex sm:flex-row  items-center w-[200px] sm:w-[260px] md:w-[260px] py-4 justify-evenly rounded-xl">
         <div className="text-[#FCC43E] text-[45px]">
           <BsFillCalendarEventFill />
         </div>
         <div className="flex flex-col justify-center items-center ">
           <p className="text-gray-500 text-[16px]">Events</p>
-          <p className="text-[#FCC43E] font-bold text-[30px]">40</p>
+          <p className="text-[rgb(252,196,62)] font-bold text-[30px]">40</p>
         </div>
       </div>
 

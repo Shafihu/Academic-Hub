@@ -23,7 +23,7 @@ ChartJS.register(
   BarController,
 );
 
-export default function BarChart({info}) {
+export default function BarChart() {
 
 
   const data = {
@@ -79,7 +79,7 @@ export default function BarChart({info}) {
     <div style={{ width: '100%', overflowX: 'auto' }}>
       <Bar 
         data={data} 
-        className="max-h-[230px]" 
+        className="max-h-[240px]" 
         options={options}>
       </Bar>
       </div>

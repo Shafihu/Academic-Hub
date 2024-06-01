@@ -8,6 +8,7 @@ import Papa from 'papaparse';
 import Image from 'next/image';
 import TeacherForm from '@/components/TeacherForm';
 import { useRouter } from 'next/navigation';
+import BarChartSalary from '@/components/BarChartSalary';
 
 const Page = () => {
   const [user, setUser] = useState(null);
@@ -122,7 +123,7 @@ const Page = () => {
   }
 
   return (
-    <div className='flex flex-col px-[25px] sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[80px] lg:pt-8 relative gap-6'>
+    <div className='flex flex-col sm:p-[30px] w-full flex-1 h-screen overflow-y-auto pt-[80px] lg:pt-8 relative gap-6'>
       {formToggle && (
         <div className='bg-black/30 rounded-tl-xl container absolute top-0 left-0 h-screen z-10 grid place-items-center'>
           <div ref={formRef} className='bg-white p-6 rounded-lg'>
@@ -251,7 +252,9 @@ const Page = () => {
       )}
           </>
       ) : (
-        <div>Graph</div>
+        <>
+               <BarChartSalary info={filteredData} /> 
+        </>
       )}
 
     </div>
