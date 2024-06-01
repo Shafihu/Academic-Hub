@@ -74,7 +74,7 @@ const mockTeachersData = () => {
     },
     {
       id: 7,
-      img: '/profilePicAlt.png',
+      img: '/profilePic2.jpg',
       name: 'Kojo Adjei',
       subject: 'History',
       class: '10D',

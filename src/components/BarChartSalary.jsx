@@ -11,6 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 ChartJS.register(
   CategoryScale,
@@ -67,7 +68,16 @@ export default function BarChartSalary({ info }) {
 
     tooltipEl.innerHTML = `
     <div style="display: flex; flex-direction: column; align-items: center;">
-      <img src="${teacher.img}" alt="${teacher.name}" style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid rgba(252, 196, 62, 1);" />
+      <div style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid rgba(252, 196, 62, 1); overflow: hidden;">
+      <Image
+      src=${teacher.img}
+      alt=${teacher.name}
+      width={1000}
+      height={1000}
+      objectPosition='center'
+      objectFit='cover'
+    />
+      </div>
       <p>${teacher.name}: ₵${teacher.salary}</p>
       <p>${teacher.subject}</p>
       <p>${teacher.contact}</p>

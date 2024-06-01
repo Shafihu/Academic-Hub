@@ -172,7 +172,7 @@ const Page = () => {
         <div className='overflow-x-auto'>
           {filteredData.length > 0 ? (
             <table className='min-w-full divide-y divide-gray-200'>
-              <thead className='bg-gray-50'>
+              <thead className='bg-yellow-300'>
                 <tr>
                   <th className='px-6 py-3 text-left text-xs font-semibold text-gray-800 uppercase tracking-wider'>
                     Id
@@ -208,19 +208,23 @@ const Page = () => {
                     className={
                       index % 2 === 0
                         ? 'bg-white cursor-pointer hover:scale-[1.02] transition-transform transform'
-                        : 'bg-violet-50 cursor-pointer hover:scale-[1.02] transition-transform transform'
+                        : 'bg-yellow-50 cursor-pointer hover:scale-[1.02] transition-transform transform'
                     }
                   >
                     <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600'>
                       {row.id}
                     </td>
                     <td className='flex items-center gap-3 px-6 py-4 whitespace-nowrap text-sm font-medium text-indigo-600'>
-                      <Image
-                        src={row.img}
-                        alt='user profile picture'
-                        width={30}
-                        height={30}
-                      />{' '}
+                      <div className='overflow-hidden max-w-10 max-h-10 rounded-full border-2 border-yellow-400'>
+                        <Image
+                          src={row.img}
+                          alt='user profile picture'
+                          width={1000}
+                          height={1000}
+                          objectPosition='center'
+                          objectFit='cover'
+                        />
+                      </div>
                       {row.name}
                     </td>
                     <td className='px-6 py-4 whitespace-nowrap text-sm text-indigo-500'>
