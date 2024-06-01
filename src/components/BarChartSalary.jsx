@@ -66,12 +66,12 @@ export default function BarChartSalary({ info }) {
     const teacher = info[tooltipModel.dataPoints[0].dataIndex];
 
     tooltipEl.innerHTML = `
-      <div style="display: flex; flex-direction: column; align-items: center;" >
-        <img src="${teacher.img}" alt="${teacher.name}" style="width: 50px; height: 50px; border-radius: 50%;" />
-        <p>${teacher.name}: $${teacher.salary}</p>
-        <p>${teacher.subject}</p>
-        <p>${teacher.contact}</p>
-      </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="${teacher.img}" alt="${teacher.name}" style="width: 50px; height: 50px; border-radius: 50%; border: 3px solid rgba(252, 196, 62, 1);" />
+      <p>${teacher.name}: ₵${teacher.salary}</p>
+      <p>${teacher.subject}</p>
+      <p>${teacher.contact}</p>
+    </div>
     `;
   };
 

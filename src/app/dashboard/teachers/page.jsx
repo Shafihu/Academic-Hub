@@ -158,8 +158,8 @@ const Page = () => {
           <button onClick={() => handleTabSwitch({ tab: 'list' })} className={` ${activeTab === 'list' ? 'text-indigo-500' : 'text-gray-500'} text-3xl cursor-pointer hover:text-indigo-600'`}>
              <FaListAlt className='hover:text-indigo-600 hover:scale-110 transition-transform transform' />
           </button>
-          <button onClick={() => handleTabSwitch({ tab: 'graph' })} className={` ${activeTab === 'graph' ? 'text-indigo-500' : 'text-gray-500'} text-3xl cursor-pointer'`}>
-             <FaChartArea className='hover:text-indigo-500 hover:scale-110 transition-transform transform'/>
+          <button onClick={() => handleTabSwitch({ tab: 'graph' })} className={` ${activeTab === 'graph' ? 'text-[rgb(252,196,62)]' : 'text-gray-500'} text-3xl cursor-pointer'`}>
+             <FaChartArea className='hover:text-[rgb(252,196,62)] hover:scale-110 transition-transform transform'/>
           </button>
         </div>
       </div>
