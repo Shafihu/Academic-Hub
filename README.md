@@ -2,7 +2,7 @@
 
 ## Overview
 
-The School Management App is a web application designed to help manage various aspects of a school's operations, including student information, teacher assignments, class schedules, and employee details. It is built with Next.js for the frontend and Firebase for the backend, ensuring a scalable and efficient solution.
+The School Management App is a web application designed by Sulemana Seidu and Mustapha Shafihu to help manage various aspects of a school's operations, including student information, teacher assignments, class schedules, and employee details. It is built with Next.js for the frontend and Firebase for the backend, ensuring a scalable and efficient solution.
 
 ## Features
 
